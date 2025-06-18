@@ -1,4 +1,4 @@
-# Projeto: Geração e envio de dados do sensor BMX055 através do LARA R211, usando HTTPS para o Firebase
+# Projeto: Geração e envio de dados do sensor BMX055 através do LARA R211, usando HTTPS para o Firebase, com ESP32
 # Autor: Diogo Ferreira
 # Data de Criação: 05/05/2025
 
