@@ -44,11 +44,9 @@
 │    │  
 │    ├── includes_codigo_cpp_r211.h  
 │    └── includes_codigo_h_r211.h  
-│  
 ├── 📁 RTC  
 │    ├── horas_rtc.cpp  
 │    └── horas_rtc.h  
-│  
 ├── definicoes.h
 ├── LARA_R211_Servidor_BMX055.ino
 └── README.txt
@@ -61,20 +59,17 @@ Este projeto realiza a aquisição e o envio de dados do sensor BMX055 para o Fi
 ## Como Usar
 
 1. Conecte o BMX055,LARA R211,RTC ao microcontrolador conforme a definição dos pinos em `definicao_pinos.h`.
-2.Caso esteja a usar a logica de 3.3v no LARA, devera fornecer-lhe uma tensão de 5V (tem de dar para 2A), e também 
-uma tensão de 3.3V, pode usar um divisor de tensão.
-3. Ler o arquivo `BMX055/config.h`, ele tem os parâmetros necessários para configurar o sensor BMX055,
-esses parâmetros são colocados no LARA_R211_Servidor_BMX055.ino.
-4.É necessário configurar o numero de telefone para qual o LARA mandará confirmações e receberá sms no ficheiro definições.h
+2. Caso esteja a usar a logica de 3.3v no LARA, devera fornecer-lhe uma tensão de 5V (tem de dar para 2A), e também uma tensão de 3.3V, pode usar um divisor de tensão.
+3. Ler o arquivo `BMX055/config.h`, ele tem os parâmetros necessários para configurar o sensor BMX055,esses parâmetros são colocados no LARA_R211_Servidor_BMX055.ino.
+4. É necessário configurar o numero de telefone para qual o LARA mandará confirmações e receberá sms no ficheiro definições.h
 5. Abra o http_https.cpp, tem de configurar o certificado a usar (se ainda não o carregou usar o ## a baixo)
-6.Configurar link da base de dados, trocar ou manter a APN do cartão sim no definições.h
-7.Configurar o caminho, que quer para os dados a mandar no http_https.cpp 
+6. Configurar link da base de dados, trocar ou manter a APN do cartão sim no definições.h
+7. Configurar o caminho, que quer para os dados a mandar no http_https.cpp 
 8. Compile e faça o upload do código `LARA_R211_Servidor_BMX055.ino` para o microcontrolador.
 9. O sistema ira mandar uma mensagem a dizer "Setup concluído!", neste momento podemos enviar o sms "ligar https", ele aqui vai configurar o lara para a comunicao https,
 iremos ter de receber o sms "https iniciado!". Depois podemos enviar o sms "enviar https", iremos receber um sms, "A enviar dados para o servidor", este é o ponto
-em que ele ira comecar o processo de envio de dados do BMX055 para o firebase. Quando quiser que os dados parem pode desligar o modulo ou enviar o sms "A parar de enviar os dados", se mais tarde quiser 
-retomar é so enviar "enviar https", se desligar o modulo, tem de repetir todos os passos deste ponto 7.
-10.O LED1_PIN liga ao concluir o setup; O LED2_PIN liga ao concluir a ligação https; O LED3_PIN liga e desliga caso esteja a enviar ou a não enviar dados, respetivamente.
+em que ele ira comecar o processo de envio de dados do BMX055 para o firebase. Quando quiser que os dados parem pode desligar o modulo ou enviar o sms "A parar de enviar os dados", se mais tarde quiser retomar é so enviar "enviar https", se desligar o modulo, tem de repetir todos os passos deste ponto 7.
+10. O LED1_PIN liga ao concluir o setup; O LED2_PIN liga ao concluir a ligação https; O LED3_PIN liga e desliga caso esteja a enviar ou a não enviar dados, respetivamente.
 
 ## Como CARREGAR certificado para https no LARA R211
 
