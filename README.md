@@ -41,11 +41,14 @@
 │    │    ├── mandar_comandos.h  
 │    │    ├── power_r211.h  
 │    │    └── sms.h  
+│    │ 
 │    ├── includes_codigo_cpp_r211.h  
 │    └── includes_codigo_h_r211.h   
+│ 
 ├── 📁 RTC  
 │    ├── horas_rtc.cpp  
 │    └── horas_rtc.h  
+│ 
 ├── definicoes.h
 ├── LARA_R211_Servidor_BMX055.ino
 └── README.txt
@@ -74,14 +77,14 @@ retomar é so enviar "enviar https", se desligar o modulo, tem de repetir todos 
 
 ## Como CARREGAR certificado para https no LARA R211
 
-1.ir a certificado.h , e no "static const char* root_ca = …", colocar o certificado PEM, cuidado a colocar, não é so copiar e colar, coloque o certificado da mesma forma que um de exemplo já la esta.
-2.ir a certificado.cpp, e na função void mandar_certificado_texto(), ira alterar o nome da variável de cima(caso tenha alterado o roor_ca para outro nome) e alterar o nome do certificado com que este vai ficar no LARA 
+1. ir a certificado.h , e no "static const char* root_ca = …", colocar o certificado PEM, cuidado a colocar, não é so copiar e colar, coloque o certificado da mesma forma que um de exemplo já la esta.
+2. ir a certificado.cpp, e na função void mandar_certificado_texto(), ira alterar o nome da variável de cima(caso tenha alterado o roor_ca para outro nome) e alterar o nome do certificado com que este vai ficar no LARA 
 3. ir ao LARA_R211_Servidor_BMX055.ino, e descomentar a linha//mandar_certificado_texto();, (esta nas ultimas linhas do void setup). 
-4.Carregar o código no microcontrolador, no fim do setup todos os certificador irão ser enumerados, pode confirmar se foi vem sucedido
+4. Carregar o código no microcontrolador, no fim do setup todos os certificador irão ser enumerados, pode confirmar se foi vem sucedido
 
 ## Como ELIMINAR certificado para https no LARA R211
 
-1.ir ao LARA_R211_Servidor_BMX055.ino, e descomentar a linha //remover_certificado();, (esta nas ultimas linhas do void setup). 
+1. ir ao LARA_R211_Servidor_BMX055.ino, e descomentar a linha //remover_certificado();, (esta nas ultimas linhas do void setup). 
 2. Carregar o código no microcontrolador, ele ira enumerar todos os certificados, e pede pelo Serial monitor o nome do certificado a retirar, devera copiar o certificado a remover, colar no Serial monitor e dar enter.
 3. para remover outro devera repetir o passo 2.
 
