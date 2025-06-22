@@ -50,10 +50,10 @@ uint8_t range_GYR = RANGE_GYR_500;
 //o sensor sera inicializado com as diferentes opcoes do magnetometro :
 uint8_t rate_MAG = RATE_MAG_10Hz;
 
-String qual_registo = "acc";  //escrever ACC,MAG ou GYR para adquirir os dados  de um dos sensores corretamente pelo python
+String qual_registo = "TUDO";  //escrever ACC,MAG ou GYR para adquirir os dados  de um dos sensores corretamente pelo python
                               //escrever PRINT_ACC,PRINT_MAG ou PRINT_GYR para visualizar somente um dos sensores no serial
                               //escrever qualquer coisa que nao os de cima para so dar print de todos ao mesmo tempo
-
+//tem de ter tudo para evviar os dados para a base de dados de forma certa, se tiver  acc vai causar erros
 //-------------------------------------------------------------------------------------------------------
 
 
