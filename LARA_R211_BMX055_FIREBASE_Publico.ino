@@ -278,8 +278,6 @@ void loop() {
         //DADOS BMX055
         //-----------------------------------------------------------------------------------
         //variaveis para o acelerometro
-        float ax, ay, az, temperature;
-        String orientation;
 
        dados_bmx();
 
